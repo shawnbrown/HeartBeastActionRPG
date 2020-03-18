@@ -14,9 +14,8 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()  # Scale to unit length.
 
 	if input_vector != Vector2.ZERO:
-		velocity += input_vector * ACCELERATION * delta
-		velocity = velocity.clamped(MAX_SPEED * delta)
+		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION)
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 
-	move_and_collide(velocity)
+	move_and_collide(velocity * delta)
