@@ -10,6 +10,9 @@ position = Vector2( 40, 40 )
 texture = ExtResource( 1 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 2 )
