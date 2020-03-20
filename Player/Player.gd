@@ -4,7 +4,7 @@ const ACCELERATION = 10
 const MAX_SPEED = 100
 const FRICTION = 10
 
-var velocity = Vector2.ZERO
+var velocity = Vector2()
 var x = 0.0
 var y = 0.0
 
