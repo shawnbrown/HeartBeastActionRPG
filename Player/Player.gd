@@ -10,7 +10,7 @@ var y = 0.0
 
 onready var animation_player = get_node("AnimationPlayer")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
