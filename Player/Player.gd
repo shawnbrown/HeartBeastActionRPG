@@ -8,8 +8,7 @@ var velocity = Vector2()
 var x = 0.0
 var y = 0.0
 
-onready var animation_player = $AnimationPlayer
-
+onready var animation_player = get_node("AnimationPlayer")
 
 func _physics_process(delta):
 	x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
