@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -139,6 +139,10 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
+[sub_resource type="AnimationNodeStateMachine" id=10]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -163,4 +167,6 @@ anims/RunRight = SubResource( 8 )
 anims/RunUp = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 11 )
