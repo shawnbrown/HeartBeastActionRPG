@@ -142,8 +142,8 @@ tracks/0/keys = {
 [sub_resource type="AnimationNodeBlendSpace2D" id=10]
 
 [sub_resource type="AnimationNodeStateMachine" id=11]
-states/BlendSpace2D/node = SubResource( 10 )
-states/BlendSpace2D/position = Vector2( 265, 115 )
+states/Idle/node = SubResource( 10 )
+states/Idle/position = Vector2( 265, 115 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
@@ -175,4 +175,4 @@ tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 12 )
-parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
