@@ -169,4 +169,5 @@ anims/RunUp = SubResource( 9 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 11 )
