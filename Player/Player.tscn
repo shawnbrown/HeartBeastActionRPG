@@ -139,8 +139,6 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=17]
-
 [sub_resource type="AnimationNodeAnimation" id=10]
 animation = "IdleLeft"
 
@@ -164,11 +162,13 @@ blend_point_3/node = SubResource( 13 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+
 [sub_resource type="AnimationNodeStateMachine" id=15]
-states/BlendSpace2D/node = SubResource( 17 )
-states/BlendSpace2D/position = Vector2( 447, 115 )
 states/Idle/node = SubResource( 14 )
 states/Idle/position = Vector2( 265, 115 )
+states/Run/node = SubResource( 17 )
+states/Run/position = Vector2( 447, 115 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=16]
 
@@ -200,5 +200,5 @@ tree_root = SubResource( 15 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 16 )
-parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )
