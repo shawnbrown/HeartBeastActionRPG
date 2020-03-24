@@ -9,6 +9,7 @@ var input_vector = Vector2()
 
 onready var animation_player = get_node("AnimationPlayer")
 onready var animation_tree = get_node("AnimationTree")
+onready var state_machine = animation_tree.get("parameters/playback")
 
 func _physics_process(_delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -17,8 +18,10 @@ func _physics_process(_delta):
 	if input_vector != Vector2.ZERO:
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
+		state_machine.travel("Run")
 		velocity = velocity.move_toward(input_vector.normalized() * MAX_SPEED, ACCELERATION)
 	else:
+		state_machine.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 
 	velocity = move_and_slide(velocity)
