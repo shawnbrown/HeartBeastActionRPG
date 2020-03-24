@@ -16,10 +16,11 @@ func _physics_process(_delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
 	if input_vector != Vector2.ZERO:
+		input_vector = input_vector.normalized()
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
 		state_machine.travel("Run")
-		velocity = velocity.move_toward(input_vector.normalized() * MAX_SPEED, ACCELERATION)
+		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION)
 	else:
 		state_machine.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
