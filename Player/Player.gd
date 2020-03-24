@@ -8,19 +8,17 @@ var velocity = Vector2()
 var input_vector = Vector2()
 
 onready var animation_player = get_node("AnimationPlayer")
+onready var animation_tree = get_node("AnimationTree")
 
 func _physics_process(_delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 
 	if input_vector != Vector2.ZERO:
-		if input_vector.x > 0:
-			animation_player.play("RunRight")
-		else:
-			animation_player.play("RunLeft")
+		animation_tree.set("parameters/Idle/blend_position", input_vector)
+		animation_tree.set("parameters/Run/blend_position", input_vector)
 		velocity = velocity.move_toward(input_vector.normalized() * MAX_SPEED, ACCELERATION)
 	else:
-		animation_player.play("IdleRight")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 
 	velocity = move_and_slide(velocity)
