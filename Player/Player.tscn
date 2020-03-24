@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -139,7 +139,11 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
+[sub_resource type="AnimationNodeBlendSpace2D" id=12]
+
 [sub_resource type="AnimationNodeStateMachine" id=10]
+states/BlendSpace2D/node = SubResource( 12 )
+states/BlendSpace2D/position = Vector2( 265, 115 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
@@ -171,3 +175,4 @@ tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 11 )
+parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
