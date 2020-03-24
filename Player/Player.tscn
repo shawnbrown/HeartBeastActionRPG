@@ -161,3 +161,5 @@ anims/RunDown = SubResource( 6 )
 anims/RunLeft = SubResource( 7 )
 anims/RunRight = SubResource( 8 )
 anims/RunUp = SubResource( 9 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
