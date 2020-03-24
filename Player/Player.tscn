@@ -162,35 +162,35 @@ blend_point_3/node = SubResource( 13 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "RunLeft"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "RunDown"
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "RunRight"
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "RunUp"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=15]
-blend_point_0/node = SubResource( 18 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=19]
+blend_point_0/node = SubResource( 15 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 19 )
+blend_point_1/node = SubResource( 16 )
 blend_point_1/pos = Vector2( 0, 1 )
-blend_point_2/node = SubResource( 20 )
+blend_point_2/node = SubResource( 17 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 21 )
+blend_point_3/node = SubResource( 18 )
 blend_point_3/pos = Vector2( 0, -1 )
 
-[sub_resource type="AnimationNodeStateMachine" id=16]
+[sub_resource type="AnimationNodeStateMachine" id=20]
 states/Idle/node = SubResource( 14 )
 states/Idle/position = Vector2( 265, 115 )
-states/Run/node = SubResource( 15 )
+states/Run/node = SubResource( 19 )
 states/Run/position = Vector2( 447, 115 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -216,9 +216,9 @@ anims/RunRight = SubResource( 8 )
 anims/RunUp = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 16 )
+tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 17 )
+parameters/playback = SubResource( 21 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
