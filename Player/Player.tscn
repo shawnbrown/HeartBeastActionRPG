@@ -139,13 +139,13 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=12]
+[sub_resource type="AnimationNodeBlendSpace2D" id=10]
 
-[sub_resource type="AnimationNodeStateMachine" id=10]
-states/BlendSpace2D/node = SubResource( 12 )
+[sub_resource type="AnimationNodeStateMachine" id=11]
+states/BlendSpace2D/node = SubResource( 10 )
 states/BlendSpace2D/position = Vector2( 265, 115 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -171,8 +171,8 @@ anims/RunRight = SubResource( 8 )
 anims/RunUp = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 10 )
+tree_root = SubResource( 11 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 11 )
+parameters/playback = SubResource( 12 )
 parameters/BlendSpace2D/blend_position = Vector2( 0, 0 )
