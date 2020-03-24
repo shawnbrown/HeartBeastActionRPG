@@ -162,15 +162,15 @@ blend_point_3/node = SubResource( 13 )
 blend_point_3/pos = Vector2( 0, -1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
 
-[sub_resource type="AnimationNodeStateMachine" id=15]
+[sub_resource type="AnimationNodeStateMachine" id=16]
 states/Idle/node = SubResource( 14 )
 states/Idle/position = Vector2( 265, 115 )
-states/Run/node = SubResource( 17 )
+states/Run/node = SubResource( 15 )
 states/Run/position = Vector2( 447, 115 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -196,9 +196,9 @@ anims/RunRight = SubResource( 8 )
 anims/RunUp = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 15 )
+tree_root = SubResource( 16 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 16 )
+parameters/playback = SubResource( 17 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
