@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -29,3 +30,4 @@ position = Vector2( 235, 95 )
 position = Vector2( 195, 145 )
 
 [node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 3 )
