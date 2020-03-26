@@ -31,3 +31,4 @@ position = Vector2( 195, 145 )
 
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
+centered = false
