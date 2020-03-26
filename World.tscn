@@ -9,6 +9,7 @@
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 centered = false
+region_enabled = true
 
 [node name="YSort" type="YSort" parent="."]
 
