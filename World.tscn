@@ -27,3 +27,5 @@ position = Vector2( 235, 95 )
 
 [node name="Bush6" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 195, 145 )
+
+[node name="Background" type="Sprite" parent="."]
