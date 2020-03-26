@@ -6,6 +6,10 @@
 
 [node name="World" type="Node2D"]
 
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
@@ -28,7 +32,3 @@ position = Vector2( 235, 95 )
 
 [node name="Bush6" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 195, 145 )
-
-[node name="Background" type="Sprite" parent="."]
-texture = ExtResource( 3 )
-centered = false
