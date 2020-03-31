@@ -48,6 +48,7 @@ tile_data = PoolIntArray( -65530, 0, 0, -65529, 0, 2, 6, 0, 65536, 7, 0, 65538, 
 
 [node name="DirtCliffTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
 format = 1
 
 [node name="YSort" type="YSort" parent="."]
