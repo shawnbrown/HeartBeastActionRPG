@@ -11,6 +11,9 @@ onready var animation_player = get_node("AnimationPlayer")
 onready var animation_tree = get_node("AnimationTree")
 onready var state_machine = animation_tree.get("parameters/playback")
 
+func _ready():
+	animation_tree.active = true
+
 func _physics_process(_delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
