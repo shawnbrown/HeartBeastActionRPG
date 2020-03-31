@@ -38,7 +38,7 @@
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 352, 160 )
 0/tile_mode = 1
-0/autotile/bitmask_mode = 0
+0/autotile/bitmask_mode = 1
 0/autotile/bitmask_flags = [  ]
 0/autotile/icon_coordinate = Vector2( 0, 0 )
 0/autotile/tile_size = Vector2( 32, 32 )
