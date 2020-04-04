@@ -52,3 +52,6 @@ func move_state():
 
 func attack_state():
 	state_machine.travel("Attack")
+
+func attack_animation_finished():
+	state = MOVE
