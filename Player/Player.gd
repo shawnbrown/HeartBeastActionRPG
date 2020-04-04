@@ -4,6 +4,13 @@ const ACCELERATION = 10
 const MAX_SPEED = 100
 const FRICTION = 10
 
+enum {
+	MOVE,
+	ROLL,
+	ATTACK
+}
+
+var state = MOVE
 var velocity = Vector2()
 var input_vector = Vector2()
 
