@@ -38,6 +38,7 @@ func move_state():
 		input_vector = input_vector.normalized()
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
+		animation_tree.set("parameters/Attack/blend_position", input_vector)
 		state_machine.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION)
 	else:
@@ -50,4 +51,4 @@ func move_state():
 		state = ATTACK
 
 func attack_state():
-	pass
+	state_machine.travel("Attack")
