@@ -22,7 +22,13 @@ func _ready():
 	animation_tree.active = true
 
 func _physics_process(_delta):
-	move_state()
+	match state:
+		MOVE:
+			move_state()
+		ROLL:
+			pass
+		ATTACK:
+			attack_state()
 
 func move_state():
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
