@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -199,6 +199,8 @@ tracks/0/keys = {
 "values": [ 7, 8, 9, 10, 11, 6 ]
 }
 
+[sub_resource type="AnimationNodeBlendSpace2D" id=28]
+
 [sub_resource type="AnimationNodeAnimation" id=14]
 animation = "IdleLeft"
 
@@ -253,13 +255,20 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
 [sub_resource type="AnimationNodeStateMachine" id=26]
+states/Attack/node = SubResource( 28 )
+states/Attack/position = Vector2( 265, 197.963 )
 states/Idle/node = SubResource( 18 )
 states/Idle/position = Vector2( 265, 115 )
 states/Run/node = SubResource( 23 )
 states/Run/position = Vector2( 447, 115 )
-transitions = [ "Idle", "Run", SubResource( 24 ), "Run", "Idle", SubResource( 25 ) ]
+transitions = [ "Idle", "Run", SubResource( 24 ), "Run", "Idle", SubResource( 25 ), "Idle", "Attack", SubResource( 29 ), "Attack", "Idle", SubResource( 30 ) ]
 start_node = "Idle"
+graph_offset = Vector2( 0, 47.1152 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=27]
 
@@ -294,5 +303,6 @@ anims/RunUp = SubResource( 13 )
 tree_root = SubResource( 26 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 27 )
+parameters/Attack/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
