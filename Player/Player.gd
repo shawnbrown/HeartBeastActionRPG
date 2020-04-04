@@ -32,3 +32,6 @@ func move_state():
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 
 	velocity = move_and_slide(velocity)
+
+func attack_state():
+	pass
