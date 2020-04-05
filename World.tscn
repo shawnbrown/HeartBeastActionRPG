@@ -522,3 +522,5 @@ position = Vector2( 240, 150 )
 
 [node name="Bush6" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 175, 165 )
+
+[node name="Bushes" type="YSort" parent="YSort"]
