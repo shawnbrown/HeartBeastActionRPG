@@ -386,4 +386,5 @@ parameters/Attack/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="HitboxPivot" type="Position2D" parent="."]
+position = Vector2( 0, -4 )
