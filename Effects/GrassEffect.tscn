@@ -38,3 +38,4 @@ script = ExtResource( 2 )
 frames = SubResource( 1 )
 centered = false
 offset = Vector2( -8, -8 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
