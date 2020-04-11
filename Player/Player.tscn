@@ -452,6 +452,7 @@ graph_offset = Vector2( 0, 47.1152 )
 height = 12.0
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
