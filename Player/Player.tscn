@@ -391,3 +391,5 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 position = Vector2( 0, -4 )
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
+
+[editable path="HitboxPivot/SwordHitbox"]
