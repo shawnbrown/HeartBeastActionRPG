@@ -8,3 +8,6 @@ func _process(delta):
 		world.add_child(grass_effect)
 		grass_effect.global_position = self.global_position
 		queue_free()
+
+func _on_Hurtbox_area_entered(area):
+	pass # Replace with function body.
