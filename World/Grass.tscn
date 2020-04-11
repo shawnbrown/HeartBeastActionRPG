@@ -13,3 +13,5 @@ centered = false
 offset = Vector2( -8, -8 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
+
+[editable path="Hurtbox"]
