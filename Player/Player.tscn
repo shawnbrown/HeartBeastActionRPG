@@ -390,4 +390,4 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
 
-[node name="Hitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
+[node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
