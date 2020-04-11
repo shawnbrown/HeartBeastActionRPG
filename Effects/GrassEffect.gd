@@ -7,4 +7,4 @@ func _ready():
 	animated_sprite.play("default")
 
 func _on_AnimatedSprite_animation_finished():
-	pass # Replace with function body.
+	queue_free()
