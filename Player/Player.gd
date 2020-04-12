@@ -54,5 +54,8 @@ func attack_state():
 	velocity = Vector2()  # Keep player from sliding forward after attack.
 	state_machine.travel("Attack")
 
+func roll_animation_finished():
+	state = MOVE
+
 func attack_animation_finished():
 	state = MOVE
