@@ -35,6 +35,7 @@ animations = [ {
 radius = 4.0
 
 [node name="Bat" type="KinematicBody2D"]
+collision_layer = 16
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
