@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -557,6 +557,10 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=36]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
 [sub_resource type="AnimationNodeStateMachine" id=37]
 states/Attack/node = SubResource( 22 )
 states/Attack/position = Vector2( 265, 197.963 )
@@ -566,7 +570,7 @@ states/Roll/node = SubResource( 40 )
 states/Roll/position = Vector2( 265, 27.8163 )
 states/Run/node = SubResource( 32 )
 states/Run/position = Vector2( 447, 115 )
-transitions = [ "Idle", "Run", SubResource( 33 ), "Run", "Idle", SubResource( 34 ), "Idle", "Attack", SubResource( 35 ), "Attack", "Idle", SubResource( 36 ) ]
+transitions = [ "Idle", "Run", SubResource( 33 ), "Run", "Idle", SubResource( 34 ), "Idle", "Attack", SubResource( 35 ), "Attack", "Idle", SubResource( 36 ), "Roll", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 42 ) ]
 start_node = "Idle"
 graph_offset = Vector2( 0, -54.1837 )
 
