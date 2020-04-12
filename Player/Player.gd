@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const ACCELERATION = 10
 const MAX_SPEED = 100
+const ROLL_SPEED = 120
 const FRICTION = 10
 
 enum {
@@ -12,6 +13,7 @@ enum {
 
 var state = MOVE
 var velocity = Vector2()
+var roll_vector = Vector2.LEFT
 var input_vector = Vector2()
 
 onready var animation_player = get_node("AnimationPlayer")
@@ -36,6 +38,7 @@ func move_state():
 
 	if input_vector != Vector2.ZERO:
 		input_vector = input_vector.normalized()
+		roll_vector = input_vector
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
 		animation_tree.set("parameters/Attack/blend_position", input_vector)
@@ -55,7 +58,9 @@ func move_state():
 		state = ATTACK
 
 func roll_state():
+	velocity = roll_vector * ROLL_SPEED
 	state_machine.travel("Roll")
+	velocity = move_and_slide(velocity)
 
 func attack_state():
 	velocity = Vector2()  # Keep player from sliding forward after attack.
