@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -522,6 +522,8 @@ min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeBlendSpace2D" id=40]
+
 [sub_resource type="AnimationNodeAnimation" id=28]
 animation = "RunLeft"
 
@@ -560,6 +562,8 @@ states/Attack/node = SubResource( 22 )
 states/Attack/position = Vector2( 265, 197.963 )
 states/Idle/node = SubResource( 27 )
 states/Idle/position = Vector2( 265, 115 )
+states/Roll/node = SubResource( 40 )
+states/Roll/position = Vector2( 265, 27.8163 )
 states/Run/node = SubResource( 32 )
 states/Run/position = Vector2( 447, 115 )
 transitions = [ "Idle", "Run", SubResource( 33 ), "Run", "Idle", SubResource( 34 ), "Idle", "Attack", SubResource( 35 ), "Attack", "Idle", SubResource( 36 ) ]
@@ -609,6 +613,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 38 )
 parameters/Attack/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Roll/blend_position = Vector2( 0, 0 )
 parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
