@@ -43,7 +43,6 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "fly"
-frame = 2
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -54,3 +53,5 @@ texture = ExtResource( 2 )
 shape = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
+
+[editable path="Hurtbox"]
