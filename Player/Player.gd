@@ -19,9 +19,11 @@ var input_vector = Vector2()
 onready var animation_player = get_node("AnimationPlayer")
 onready var animation_tree = get_node("AnimationTree")
 onready var state_machine = animation_tree.get("parameters/playback")
+onready var sword_hitbox = get_node("HitboxPivot/SwordHitbox")
 
 func _ready():
 	animation_tree.active = true
+	sword_hitbox.knockback_vector = roll_vector
 
 func _physics_process(_delta):
 	match state:
@@ -39,6 +41,7 @@ func move_state():
 	if input_vector != Vector2.ZERO:
 		input_vector = input_vector.normalized()
 		roll_vector = input_vector
+		sword_hitbox.knockback_vector = input_vector
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
 		animation_tree.set("parameters/Attack/blend_position", input_vector)
