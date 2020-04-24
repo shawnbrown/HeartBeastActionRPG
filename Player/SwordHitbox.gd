@@ -1,4 +1,4 @@
-extends "res://Hitboxes and Hurtboxes/Hitbox.gd"
+extends "res://Overlap/Hitbox.gd"
 
 
 # Declare member variables here. Examples:
