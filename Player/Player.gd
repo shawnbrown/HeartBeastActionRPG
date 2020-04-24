@@ -13,7 +13,7 @@ enum {
 
 var state = MOVE
 var velocity = Vector2()
-var roll_vector = Vector2.LEFT
+var roll_vector = Vector2.DOWN
 var input_vector = Vector2()
 
 onready var animation_player = get_node("AnimationPlayer")
