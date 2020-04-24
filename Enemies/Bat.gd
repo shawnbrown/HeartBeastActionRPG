@@ -10,5 +10,6 @@ func _physics_process(delta):
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= 1
-	print(stats.health)
+	if stats.health <= 0:
+		queue_free()
 	knockback = area.knockback_vector * 120
