@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -599,6 +599,12 @@ graph_offset = Vector2( 0, -54.1837 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
+[sub_resource type="GDScript" id=47]
+script/source = "extends \"res://Hitboxes and Hurtboxes/Hitbox.gd\"
+
+var knockback_vector = Vector2()
+"
+
 [sub_resource type="CapsuleShape2D" id=46]
 height = 12.0
 
@@ -650,6 +656,7 @@ rotation = 1.5708
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
 position = Vector2( 15, 0 )
 collision_mask = 8
+script = SubResource( 47 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 shape = SubResource( 46 )
